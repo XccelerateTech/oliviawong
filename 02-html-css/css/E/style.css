@@ -1,0 +1,26 @@
+section{
+    display:flex;
+    height:200px;
+    justify-content: space-between;
+}
+
+div{
+    height:100px;
+    width: 100px;
+}
+
+.bbox{
+    background-color: blue;
+
+}
+
+.gbox{
+    background-color: green;
+    order:1;
+}
+
+.rbox{
+    background-color:red;
+    align-self:flex-end;
+
+}
