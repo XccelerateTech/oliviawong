@@ -1,6 +1,6 @@
 body{
-    margin:0;
-    padding:0;
+    margin:0; /*ensure no ugly white line*/
+    padding:0; /*ensure no ugly white line*/
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -9,10 +9,8 @@ header{
 }
 
 #frame {
-    background-image:url(img/flowershop.jpg);
+    background-image:url('./img/flowershop.jpg');
     background-repeat: repeat;
-    margin: 0;
-    padding: 0;
     width:100vw;
     height: 60vh;
 }
@@ -25,7 +23,6 @@ header{
 }
 
 #overlayer{
-    z-index:1;
     background-color: rgba(34, 33, 33, 0.7);
     width: 100vw;
     height: 34vh;
@@ -49,14 +46,16 @@ button{
 
 footer{
     background-color: rgb(214, 245, 168);
-    padding:5vh 15vw;
+    padding: 5vh 15vw;
     display: flex;
     flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
 }
 
 footer div{
     margin: 1vh auto;
-    width: 26vw;
+    width: 25vw;
     height:10vh;
     font-size: 14px;
     display: flex;

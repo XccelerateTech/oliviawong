@@ -1,0 +1,25 @@
+section{
+    height:200px;
+}
+
+div{
+    height:100px;
+    width: 100px;
+}
+
+.bbox{
+    background-color: blue;
+    float: left;
+}
+
+.gbox{
+    background-color: green;
+    float: right;
+}
+
+.rbox{
+    background-color:red;
+    clear:both;
+    position: relative;
+    left: 45vw;
+}
