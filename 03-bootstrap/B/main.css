@@ -42,13 +42,13 @@ button{
     background-color: rgb(214, 245, 168);
     padding-top: 8vh;
     padding-bottom: 10vh;
+
 }
 
 .col {
     margin-top: 5vh;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .col p{
