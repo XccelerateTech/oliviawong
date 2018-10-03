@@ -29,7 +29,7 @@ var showCode = {
     "w":22,
     "x":23,
     "y":24,
-    "z":25,
+    "z":25
 };
 
 //declare a function that takes in 1 argument

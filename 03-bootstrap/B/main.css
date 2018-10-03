@@ -38,24 +38,10 @@ button{
     border-radius:30px;
 }
 
-.row-3{
+.row{
     background-color: rgb(214, 245, 168);
     padding-top: 8vh;
-    padding-bottom: 10vh;
-
+    padding-bottom:10vh;
 }
 
-.col {
-    margin-top: 5vh;
-    display: flex;
-    align-items: center;
-}
-
-.col p{
-    padding: 0 2vw;
-}
-
-.icon{
-    width: 20%;
-}
 
