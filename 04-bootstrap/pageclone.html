@@ -6,30 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animate.css">
     <title>Clone bootstrap site</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+    
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="100">
     <div class="container-fluid">
 
        <!--navigation bar--> 
-        <nav class="navbar navbar-expand-lg nav-light fixed-top d-flex justify-content-between"">
+        <nav class="navbar my-header-nav  navbar-expand-lg nav-light fixed-top d-flex justify-content-between">
             <div class="navbar-brand ml-5" href="#">The only bootstrap page</div>
             <div class="mr-5">
             <ul class="navbar-nav">
                 <li class = "nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" data-scroll href="#promo">Promo</a>
                 </li>
                 <li class = "nav-item">
-                    <a class="nav-link" href="#">Report</a>
+                    <a class="nav-link" data-scroll href="#card">Info</a>
                 </li>
                 <li class = "nav-item">
-                    <a class="nav-link" href="#">story</a>
+                    <a class="nav-link" data-scroll href="#gallery">gallery</a>
                 </li>
                 <li class = "nav-item">
-                    <a class="nav-link" href="#">find us</a>
+                    <a class="nav-link" data-scroll href="#contact">find us</a>
                 </li>
             </ul> 
             </div>
@@ -49,7 +51,7 @@
         </div>
 
         <!--section 2 with red background and white text-->
-        <div class="row s-layout s-promo d-flex flex-column align-items-center justify-content-center">
+        <div id="promo" class="row s-layout s-promo d-flex flex-column align-items-center justify-content-center">
                 <div class="headline">
                 <p>Want to make an original website yourself?</p>
                 </div>
@@ -62,7 +64,7 @@
             </div>
 
         <!--section 3 with whith background and black text-->
-        <div class="row s-layout s-reg s-cards d-flex flex-column align-items-center justify-content-center">
+        <div id="card" class="row s-layout s-reg s-cards d-flex flex-column align-items-center justify-content-center">
             
             <div class="headline">
                 <p>Track Record</p>
@@ -75,7 +77,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                         <div class="card text-center border-white">
                         <div class="card-body">
-                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart animated tada"></i>
                             <h2 class="card-title">I like it</h2>
                             <h6 class="card-text text-secondary">Guaranteed to use the same fucking template that every other bootstrap website uses, downloaded straight from The Web™</h6>     
                             </div>
@@ -84,7 +86,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                         <div class="card text-center border-white">
                             <div class="card-body">
-                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-heart animated tada"></i>
                                 <h2 class="card-title">I like it</h2>
                                 <h6 class="card-text text-secondary">Guaranteed to use the same fucking template that every other bootstrap website uses, downloaded straight from The Web™</h6>     
                                 </div>
@@ -92,7 +94,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                         <div class="card text-center border-white">
                             <div class="card-body">
-                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-heart animated tada"></i>
                                 <h2 class="card-title">I like it</h2>
                                 <h6 class="card-text text-secondary">Guaranteed to use the same fucking template that every other bootstrap website uses, downloaded straight from The Web™</h6>     
                                 </div>
@@ -100,7 +102,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                         <div class="card text-center border-white">
                             <div class="card-body">
-                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-heart animated tada"></i>
                                 <h2 class="card-title">I like it</h2>
                                 <h6 class="card-text text-secondary">Guaranteed to use the same fucking template that every other bootstrap website uses, downloaded straight from The Web™</h6>     
                                 </div>
@@ -110,7 +112,7 @@
             </div>
 
 <!--section 4 a photo gallery with 4 containers with a quote and button beneath -->
-<div class="row">
+<div id="gallery" class="row">
     <div class="picture col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
         <img src="img/hero.jpg" width="100%">
         <div class="hint">
@@ -134,13 +136,13 @@
     <div class="row banner">
         <div class=" col-12  d-flex flex-column align-items-center justify-content-center">
             <div><p>Seriously, this is an Amazing template!</p></div>
-            <div><button class="mt-2 btn btn-w btn-lg">Google it!</button></div>
+            <div><button class="mt-2 btn btn-w btn-lg animated rubberBand">Google it!</button></div>
         </div>
     </div>
 
 
 <!--section 5 with red background and white text-->
-<div class="row s-layout s-reg s-contact d-flex flex-column align-items-center justify-content-center">
+<div id="contact" class="row s-layout s-reg s-contact d-flex flex-column align-items-center justify-content-center">
         <div class="headline">
         <p>Contact Me</p>
         </div>
@@ -148,18 +150,25 @@
         <div class="s-text"><h4>I am more include that on your webpage? You'd be a fool not to! I can't wait for all the job offers to come pouring in from all the companies wanting my insane website design skills. Honestly this template does look really nice, though.than happy to tlkare tot hdnay who love it, as much as every body one else. you nowek I dnlthalLkd fo. JIdf oandmcndkfogha</h4>
         </div>
         <!--add a row with 2 columns for the contact icons-->
-        <div class="row">
+        <div class="row ">
             <div class="contact-box col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                <div><i class="fas fa-phone"></i></div>
+                <div><i class="fas fa-phone animated swing"></i></div>
                 <div>+627 9374 2749</div>
             </div>
             <div class="contact-box col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                <div><i class="far fa-envelope"></i></div>
+                <div><i class="far fa-envelope animated swing"></i></div>
                 <div><a href="mailto:#">contact@email.com</a></div>
             </div>
         </div>
     </div>
 
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+    crossorigin="anonymous"></script>       
+    <script src="./script.js"></script>
+
+
 </body>
 </html>

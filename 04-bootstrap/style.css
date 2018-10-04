@@ -80,6 +80,18 @@ nav a, nav div{
     font: bolder 1rem Open sans;
 }
 
+.solid{
+    background:white;
+}
+
+.nav-link:active{
+    color:yellow !important;
+}
+
+.nav-brandActive{
+    color:black;
+}
+
 .btn{
     font-weight: bold;
     text-transform: uppercase;
@@ -129,6 +141,7 @@ row{
     display:flex;
     flex-direction: column;
     align-items: center;
+    width:30vw;
 }
 
 .picture{
