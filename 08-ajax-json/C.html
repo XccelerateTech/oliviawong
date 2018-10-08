@@ -11,6 +11,8 @@
 
 
     <script>
+
+    var whoIsInSpace =(callback) =>{    
     var http = new XMLHttpRequest();
 
     http.open("GET","http://api.open-notify.org/astros.json");
@@ -19,20 +21,22 @@
                 return;
             } else if (http.status == 200){
                   let data = JSON.parse(http.responseText);
-                  console.log(data);
-                  console.log(data.people[0].name)
+                  callback(data);
+            }
                 // let data = JSON.parse(http.responseText);
                 // callback(data);
-            } else {
+            else {
                 console.log("error occurred " + http.status);
             }
-        };
     
-    
-    http.send();
-    
-    
-    
+        };   
+        http.send(); 
+    };  
+    whoIsInSpace(function callback(data){
+        data.people.map(function(person){
+                     console.log(person.name);
+                     });
+    });
     </script>
 </body>
 </html>
