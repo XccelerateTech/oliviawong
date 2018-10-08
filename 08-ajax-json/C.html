@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Astronaut in Space Now</title>
+</head>
+<body>
+    <p>Tell you who is in space now</p>
+
+
+    <script>
+    var http = new XMLHttpRequest();
+
+    http.open("GET","http://api.open-notify.org/astros.json");
+    http.onreadystatechange = function(){
+            if(http.readyState != XMLHttpRequest.DONE){
+                return;
+            } else if (http.status == 200){
+                  let data = JSON.parse(http.responseText);
+                  console.log(data);
+                  console.log(data.people[0].name)
+                // let data = JSON.parse(http.responseText);
+                // callback(data);
+            } else {
+                console.log("error occurred " + http.status);
+            }
+        };
+    
+    
+    http.send();
+    
+    
+    
+    </script>
+</body>
+</html>

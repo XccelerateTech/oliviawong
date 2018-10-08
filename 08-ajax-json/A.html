@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Accessing json file from http-server</title>
+</head>
+<body>
+
+    <p>Accessing from http-server</p>
+    <script>
+    var http = new XMLHttpRequest();
+
+    http.open("GET", "../server/data.json");
+
+    http.onreadystatechange = function(){
+        if(http.readyState != XMLHttpRequest.DONE){
+            return;
+        } else if(http.status == 200){
+            let data = JSON.parse(http.responseText);
+            console.log(data);
+            // console.log(http.responseText);
+        } else {
+            console.log("error occurred "+ http.status);
+        }
+    } 
+
+    http.send();
+
+    // let data = JSON.parse(http.responseText);
+    // console.log(data);
+    </script>
+
+
+</body>
+</html>

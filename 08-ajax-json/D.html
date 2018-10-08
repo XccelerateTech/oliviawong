@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random User Generator</title>
+</head>
+<body>
+    <p>Creating User at Random</p>
+
+
+    <script>
+        class User {
+            constructor(option){
+                this.first_name = option.name.first;
+                this.last_name = option.name.last;
+                this.email = option.email;
+                this.birthDate = option.dob;
+            };
+        };
+
+    var userInit = (constructor) =>{
+        var http = new XMLHttpRequest();
+        http.open("GET", "https://randomuser.me/api/");
+        http.onreadystatechange = function(){
+            if(http.readyState != XMLHttpRequest.DONE){
+                return;
+            } else if (http.status == 200){
+                let data = JSON.parse(http.responseText)
+                  constructor(data);
+                 
+            } else {
+                console.log("error occurred " + http.status);
+            }
+        };
+        http.send();
+};
+       
+       userInit(function constructor(data){
+            var person1 = new User (data.results[0]);
+            console.log(person1);
+       })
+
+       userInit(function constructor(data){
+            var person2 = new User (data.results[0]);
+            console.log(person2);
+       })
+
+       userInit(function constructor(data){
+            var person3 = new User (data.results[0]);
+            console.log(person3);
+       })
+
+       userInit(function constructor(data){
+            var person4 = new User (data.results[0]);
+            console.log(person4);
+       })
+
+        userInit(function constructor(data){
+            var person5 = new User (data.results[0]);
+            console.log(person5);
+       })
+
+
+
+    </script>
+</body>
+</html>

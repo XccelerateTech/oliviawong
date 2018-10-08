@@ -84,7 +84,7 @@ nav a, nav div{
     background:white;
 }
 
-.nav-link:active{
+.active{
     color:yellow !important;
 }
 

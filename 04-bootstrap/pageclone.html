@@ -13,11 +13,11 @@
     <link href="http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
     
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="100">
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
     <div class="container-fluid">
 
        <!--navigation bar--> 
-        <nav class="navbar my-header-nav  navbar-expand-lg nav-light fixed-top d-flex justify-content-between">
+        <nav id="control" class="navbar my-header-nav  navbar-expand-lg nav-light fixed-top d-flex justify-content-between">
             <div class="navbar-brand ml-5" href="#">The only bootstrap page</div>
             <div class="mr-5">
             <ul class="navbar-nav">
@@ -169,6 +169,32 @@
     crossorigin="anonymous"></script>       
     <script src="./script.js"></script>
 
+
+    <script>
+    $(document).ready(function(){
+        let refElement = $(".navbar a").attr("href");
+        alert ($(refElement).position().top);
+ 
+        
+        $(window).scroll(function(){   
+            let scrollPos =$(document).scrollTop();
+           
+
+            $("#control a").each(function(){
+                let currLink = $(this);
+                let refElement = currLink.attr("href");
+                if($(refElement).position().top <= scrollPos /*&& $(refElement).position().top + $(refElement).height() > scrollTop*/){ 
+                    $("#control ul li a").removeClass("active");
+                    currLink.addClass("active");
+            } else {
+                currLink.removeClass("active");
+            };
+        });;
+    });
+});
+   
+
+    </script>
 
 </body>
 </html>
