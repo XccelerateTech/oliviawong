@@ -20,6 +20,7 @@
             };
         };
 
+//Method 1 
     var userInit = (constructor) =>{
         var http = new XMLHttpRequest();
         http.open("GET", "https://randomuser.me/api/");
@@ -62,7 +63,31 @@
             console.log(person5);
        })
 
+//Method 2
+   var userInit5 = () =>{
+        var http = new XMLHttpRequest();
+        http.open("GET", "https://randomuser.me/api/?results=5");
+        http.onreadystatechange = function(){
+            if(http.readyState != XMLHttpRequest.DONE){
+                return;
+            } else if (http.status == 200){
+                let data = JSON.parse(http.responseText)
+                let entry = data.results
 
+                let user = entry.map(function(obj){
+                   return new User(obj);
+                });
+                
+                console.log(user);
+
+            } else {
+                console.log("error occurred " + http.status);
+            }
+        };
+        http.send();
+};
+     
+userInit5();
 
     </script>
 </body>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM manipulation</title>
+</head>
+<body>
+    <header id ="happy" class="active">
+        Stay forever
+        <p>The best meal forever</p>
+        <p>The best meal forever</p>
+        <p>The best meal forever</p>
+    </header>
+
+    <section>
+        <div class="active">
+            I dont know what is going on. Whatever you do it is okay.
+        </div>
+    </section>
+
+    <button onclick="myFunc()">Try</button>
+    <p id="show"></p>
+
+
+<script>
+// //method 1. 
+// let myFunc =()=> {
+//         let element = document.querySelectorAll("#happy");
+//         element.innerHTML = ""; //this will clear out everything within the tag with the id
+//     }
+
+// //method 2
+//     let myFunc =()=> {
+//         let element = document.querySelectorAll("#happy p"); //select the child tag
+//         for(let item of element){
+//         item.remove();
+//     };  
+//     }
+
+//method 3
+let myFunc =(x)=> {
+        let element = document.querySelector(x); //select the child tag
+        while(element.firstChild){
+        element.removeChild(element.firstChild);
+    };  
+}
+
+myFunc(".active");
+</script>
+</body>
+</html>

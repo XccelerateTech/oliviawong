@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+ 
+<p>Getting country API using AJAX and .Get</p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    
+//     let informMe =(endpoint, value)=>{
+//     $(function(){
+//         $.get(`https://restcountries.eu/rest/v2/${endpoint}/${value}`)
+//     }).done(function(data){
+//         console.log(data);
+//     }).fail(function(){
+//         console.log(`error`);
+// });
+// };
+
+let informMe =(endpoint, value)=>{
+    $(function(){
+        $.ajax({
+        url: `https://restcountries.eu/rest/v2/${endpoint}/${value}`,
+        type:"GET"
+    }).done(function(data){
+        console.log(data);
+    }).fail(function(){
+        console.log(`error`);
+});
+    });
+};
+
+
+    informMe("capital","Paris")
+</script>  
+
+</body>
+</html>

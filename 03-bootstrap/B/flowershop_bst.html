@@ -19,7 +19,8 @@
         <div class="row-2 no-gutters"></div>
         <div class="overlayer">
             <h1>Flower Shop</h1>
-            <button>Learn more</button>
+            <h2 id="weather"></h2>
+            <button onclick="getWeather()">Learn more</button>
         </div>
  
  
@@ -67,5 +68,54 @@
         </div>    
 
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type='text/javascript'>
+    
+
+let ranNum = function(i){
+    let num = Math.floor(Math.random()*i);
+    return num;
+};
+
+
+
+    let getWeather = ()=> {
+        let http = new XMLHttpRequest();
+        // const apikey = "bf66190a1d640846e9b9920dc8046773";
+        // const url = "api.openweathermap.org/data/2.5/weather?q=london";
+        const cities = ['Paris','Hong%20Kong','London','Okinawa','Beijing',"Delhi", "Mumbai", "New%20York", "Istanbul", "Manila"];
+        
+        const city = cities[ranNum(cities.length-1)];
+        //important to put http:// in front of the url to make sure it access the right server
+        http.open("GET", `http://api.openweathermap.org/data/2.5/weather?q=${city}&apikey=bf66190a1d640846e9b9920dc8046773`)
+
+        http.onreadystatechange = function(){
+            if(http.readyState != XMLHttpRequest.DONE){
+                return;
+            } else if(http.status == 200){
+                displayTemp(http.responseText, city)
+            } else {
+                console.log("error occurred" + http.status)
+            }
+        }
+        http.send();
+    }
+
+    let displayTemp = (x,y) => {
+    let data = JSON.parse(x); 
+    let t = data.main.temp;
+    celcius = t - 273
+    celcius = celcius.toFixed(1);
+    $("#weather").html(`Today's temperature in ${y} is ${celcius} C`);
+
+}
+
+getWeather();
+
+// document.querySelector("#weather").innerHTML = 
+  
+    
+    </script>
+
 </body>
 </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width", initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<p>using jQ AJAX</p>    
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type='text/javascript'>
+$(function(){
+    $.ajax({
+        url: "../server/test.json",
+        type: "GET"
+    }).done(function(data){
+        console.log("I will run when AJAX is done")
+        console.log(data);
+    }).fail(function(error){
+        console.log("There was an error" + error);
+    }).always(function(){
+        console.log("I will run anyways");
+    })
+})
+
+</script>
+</body>
+</html>

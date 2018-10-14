@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM manipulation</title>
+</head>
+<body>
+    <header id ="happy" class="active">
+        <p>The best meal forever</p>
+        <p>The best meal forever</p>
+        <p>The best meal forever</p>
+    </header>
+
+    <section>
+        <div class="active">
+            I dont know what is going on. Whatever you do it is okay.
+        </div>
+    </section>
+
+    <button onclick="myFunc()">Try</button>
+    <p id="show"></p>
+
+
+<script>
+
+
+let getClass = (className) => {
+    let element = document.querySelectorAll(className);
+    let arr = [];
+        for(let item of element){
+            name = item.tagName;
+            arr.push(name);
+    }   
+    
+    document.querySelector("#show").innerHTML = arr;
+}
+
+let myFunc = () =>{
+getClass(".active")
+}
+
+
+</script>
+</body>
+</html>

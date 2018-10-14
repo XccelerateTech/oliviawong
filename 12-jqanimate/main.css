@@ -1,0 +1,42 @@
+body{
+    background-color: #eceeee;
+}
+
+.container{
+    height: 100vh;
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper{
+    width: 50vw;
+    height: 50vw;
+    margin-top: 5vh;
+    margin-bottom:5vh;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.box{
+    border:solid 0.83vw rgb(76, 95, 202);
+    width: 11vw;
+    padding: 2vw;
+}
+
+.odd{
+    font-size: 2.5rem;
+    color: red;
+    display: none;
+    position: absolute;
+}
+
+.even{
+    font-size:2rem;
+    color: yellow;
+    display: none;
+    position: absolute;
+}
